@@ -1,0 +1,71 @@
+perro(firulais).
+perro(bruno).
+perro(max).
+gato(misu).
+gato(luna).
+gato(chanel).
+gato(orion).
+ave(piolin).
+
+dueno(ana, firulais).
+dueno(ana, misu).
+dueno(luis, luna).
+dueno(luis, orion).
+dueno(luis, firulais).
+dueno(maria, piolin).
+dueno(julia, chanel).
+dueno(pedro, bruno).
+%____________________________________________
+tiene_p(X):-dueno(X,Y),perro(Y).
+%X = ana
+%X = luis
+%X = pedro
+tiene_g(X):-dueno(X,Y),gato(Y).
+%X = ana
+%X = luis
+%X = luis
+%X = julia
+tiene_multiples(X):-dueno(X,M1),dueno(X,M2),M1 \= M2.
+%X = ana
+%X = ana
+%X = luis
+%X = luis
+%X = luis
+%X = luis
+%X = luis
+%X = luis
+tipo(M, perro):- perro(M).
+tipo(M, gato):- gato(M).
+tipo(M, ave):- ave(M).
+tiene_multiples_tipos(X):-tiene_p(X),tiene_g(X).
+%X = ana
+%X = luis
+%X = luis
+amante_animales(X):-tiene_p(X),tiene_g(X).
+%X = ana
+%X = luis
+%X = luis
+mascota_compartida(X1,X2,Y):-dueno(X1,Y),dueno(X2,Y), X1\=X2.
+%X1 = ana,
+%X2 = luis,
+%Y = firulais
+%X1 = luis,
+%X2 = ana,
+%Y = firulais
+tipo_mascota(X,Z):-dueno(X,Y),tipo(Y,Z).
+%X = ana,
+%Z = perro
+%X = ana,
+%Z = gato
+%X = luis,
+%Z = gato
+%X = luis,
+%Z = gato
+%X = luis,
+%Z = perro
+%X = maria,
+%Z = ave
+%X = julia,
+%Z = gato
+%X = pedro,
+%Z = perro
