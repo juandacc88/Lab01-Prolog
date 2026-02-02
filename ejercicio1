@@ -20,10 +20,16 @@ vuelo(bogota, pasto).
 
 
 % solucion ejercicio1 
-vuelo(bogota, medellin).
+% vuelo(bogota, medellin).
+% true
 % solucion ejercicio2
-vuelo(bogota, X).
+% vuelo(bogota, X).
+% X = medellin
+% X = cartagena
+% X = pasto
 % solucion ejercicio3 
-vuelo(X, medellin).
+% vuelo(X, medellin).
+% X = bogota
 % solucion ejercicio4 
-vuelo(X, cali).
+% vuelo(X, cali).
+% false
