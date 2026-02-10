@@ -1,0 +1,19 @@
+%fibonacci(0,0).
+%fibonacci(1,1).
+%fibonacci(X,N):- X>1, X1 is X-1, X2 is X-2, fibonacci(X1,N1), fibonacci(X2,N2), N is N1+N2.
+
+
+% Consulta: fibonacci(0,X).
+% Respuesta: X = 0.
+
+% Consulta: fibonacci(1,X).
+% Respuesta: X = 1.
+
+% Consulta: fibonacci(5,X).
+% Respuesta: X = 5.
+
+% Consulta: fibonacci(6,X).
+% Respuesta: X = 8.
+
+% Consulta: fibonacci(7,X).
+% Respuesta: X = 13.
