@@ -1,0 +1,33 @@
+% nota(ana,4.5).
+% nota(luis,2.8).
+% nota(maria,3.7).
+% nota(juan,5.0).
+% nota(pedro,2.3).
+
+% Consulta: reprueba(X).
+% Respuesta: X = luis ; X = pedro.
+% reprueba(X):- nota(X,N), N<3.0.
+
+% Consulta: aprueba(X).
+% Respuesta: X = ana ; X = maria ; X = juan.
+% aprueba(X):- nota(X,N), N>=3.0.
+
+% Consulta: rango(X,3.0,4.0).
+% Respuesta: X = maria.
+% rango(X,Min,Max):- nota(X,N), N>=Min, N=<Max.
+
+% Consulta: clasificacion(X,C).
+% Respuesta:
+% X = ana, C = excelente ;
+% X = luis, C = reprobado ;
+% X = maria, C = aprobado ;
+% X = juan, C = excelente ;
+% X = pedro, C = reprobado.
+% clasificacion(X,reprobado):- nota(X,N), N>=0.0, N=<2.9.
+% clasificacion(X,aprobado):- nota(X,N), N>=3.0, N=<3.9.
+% clasificacion(X,notable):- nota(X,N), N>=4.0, N=<4.4.
+% clasificacion(X,excelente):- nota(X,N), N>=4.5, N=<5.0.
+
+% Consulta: distancia((0,0),(3,4),X).
+% Respuesta: X = 5.0.
+% distancia((X1,Y1),(X2,Y2),X):- DX is X2-X1, DY is Y2-Y1, X is sqrt(DX*DX+DY*DY).
